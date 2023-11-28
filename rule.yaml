@@ -1,8 +1,9 @@
 rules:
-- id: is-comparison
+- id: avoid-system-out
   languages:
-    - python
-  message: The operator 'is' is for reference equality, not value equality! Use
-  `==` instead!
-  pattern: $SOMEVAR is "..."
+    - java
+  message: Avoid using System.out.println for logging. Consider using a logging framework.
+  patterns:
+    - pattern: |
+        System.out.println($EXPR);
   severity: ERROR
