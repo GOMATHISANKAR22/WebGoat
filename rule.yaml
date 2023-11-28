@@ -1,9 +1,0 @@
-rules:
-- id: avoid-system-out
-  languages:
-    - java
-  message: Avoid using System.out.println for logging. Consider using a logging framework.
-  patterns:
-    - pattern: |
-        System.out.println($EXPR);
-  severity: ERROR
