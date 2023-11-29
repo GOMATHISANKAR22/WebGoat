@@ -1,0 +1,9 @@
+rules:
+  - id: javascript-xss
+    patterns:
+      - pattern: |
+          document\.write\(([^)]*)\)
+    message: "Potential XSS vulnerability: unescaped user input in JavaScript"
+    severity: WARNING
+    languages:
+      - javascript
