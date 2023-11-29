@@ -1,0 +1,6 @@
+rules:
+- id: detect-xss
+  pattern: |
+    const userProvidedInput = $1;
+    document.write(userProvidedInput);
+  message: "Potential XSS vulnerability: user input is directly written to the document"
